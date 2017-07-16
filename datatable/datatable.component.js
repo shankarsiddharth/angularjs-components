@@ -53,6 +53,7 @@ function dataTableController($rootScope, dataService) {
         }, function (err) {
             console.error('Failed to login, maybe due to CORS');
             console.error(err);
+            dt.errorMessage = "Please, use a browser with CORS disabled, to view the content.";
         });
         dt.initSort();
     }
