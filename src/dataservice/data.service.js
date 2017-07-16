@@ -1,4 +1,4 @@
-app.service('dataService', function ($http, $rootScope) {
+app.service('dataService', ['$http', '$rootScope', function ($http, $rootScope) {
     let loginDetails = {
         "username": "test@test.test",
         "password": "testtest"
@@ -27,4 +27,4 @@ app.service('dataService', function ($http, $rootScope) {
     this.getData = function (options) {
         return getData(options);
     }
-});
+}]);

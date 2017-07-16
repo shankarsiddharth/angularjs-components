@@ -1,0 +1,5 @@
+<div ng-if="$ctrl.value" class="col-md-2 pull-right">
+    <select class="form-control" ng-model="$ctrl.value" ng-change="$ctrl.onChange({selectedValue: $ctrl.value})">
+        <option ng-repeat="recordPerPage in $ctrl.recordsPerPageList" ng-value="recordPerPage" ng-selected="recordPerPage == $ctrl.value">{{recordPerPage}}</option>
+    </select>
+</div>

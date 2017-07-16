@@ -1,3 +1,4 @@
+dataTableController.$inject = ['$rootScope', 'dataService'];
 function dataTableController($rootScope, dataService) {
 
     var dt = this;
@@ -121,7 +122,7 @@ function dataTableController($rootScope, dataService) {
     }
     dt.changePage = function (page) {
         dt.currentPage = page;
-       // console.log("Page In main ctrl: " + page);
+        // console.log("Page In main ctrl: " + page);
         dt.options.page = page;
         dt.getData(dt.options);
     }
@@ -131,10 +132,10 @@ function dataTableController($rootScope, dataService) {
         }
         dt.options.search = value;
         dt.getData(dt.options);
-       // console.log(dt.options);
+        // console.log(dt.options);
     }
     dt.advSearch = function (value) {
-       // console.log(value);
+        // console.log(value);
         if (dt.options.search) {
             delete dt.options.search;
         }

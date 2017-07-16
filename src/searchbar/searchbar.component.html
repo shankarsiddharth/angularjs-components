@@ -1,0 +1,6 @@
+<div ng-if="$ctrl.canRender" class="input-group">
+    <input type="text" class="form-control" ng-disabled="$ctrl.isDisabled" ng-model="$ctrl.searchText" placeholder="Search for ID, name, city, postalcode...">
+    <span class="input-group-btn">
+        <button class="btn btn-default" ng-disabled="$ctrl.isDisabled" ng-click="$ctrl.search({searchText: $ctrl.searchText})" type="button"> <span class="glyphicon glyphicon-search"></span></button>
+    </span>
+</div>
